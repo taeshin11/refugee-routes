@@ -17,21 +17,36 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-gray-950 text-gray-100">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
         <AdHeader />
-        <header className="border-b border-gray-800 px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-white hover:text-blue-400 transition-colors">
-            Refugee Routes
-          </Link>
-          <nav className="flex gap-4 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <Link href="/about" className="hover:text-white">About</Link>
-          </nav>
-          <VisitorCounter />
+        <header className="bg-slate-900 text-white sticky top-0 z-50 border-b border-slate-700/50">
+          <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inset-0 rounded-full bg-teal-400 opacity-75"></span>
+                <span className="relative rounded-full h-2.5 w-2.5 bg-teal-400"></span>
+              </span>
+              <Link href="/" className="text-lg font-bold">Refugee Routes</Link>
+              <span className="text-xs text-slate-400 border border-slate-700 rounded-full px-2 py-0.5 hidden sm:block">LIVE</span>
+            </div>
+            <nav className="flex gap-1">
+              <Link href="/" className="text-slate-300 hover:text-white hover:bg-slate-700/50 px-3 py-2 rounded-lg text-sm">Home</Link>
+              <Link href="/#origins" className="text-slate-300 hover:text-white hover:bg-slate-700/50 px-3 py-2 rounded-lg text-sm">Origins</Link>
+              <Link href="/#destinations" className="text-slate-300 hover:text-white hover:bg-slate-700/50 px-3 py-2 rounded-lg text-sm">Destinations</Link>
+              <Link href="/about" className="text-slate-300 hover:text-white hover:bg-slate-700/50 px-3 py-2 rounded-lg text-sm">About</Link>
+            </nav>
+          </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-gray-800 px-4 py-4 text-center text-xs text-gray-500">
-          Refugee Routes © 2026 — Data sourced from UNHCR, IOM, and open government datasets
+        <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <span className="text-white font-semibold">Refugee Routes</span>
+              <span className="text-slate-600">·</span>
+              <span className="text-xs">Data sourced from UNHCR, IOM, and open government datasets</span>
+            </div>
+            <VisitorCounter />
+          </div>
         </footer>
         <AdMobileSticky />
       </body>

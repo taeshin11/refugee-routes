@@ -57,20 +57,20 @@ export default async function OriginPage(props: PageProps<"/origin/[slug]">) {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      <Link href="/" className="text-sm text-gray-400 hover:text-white mb-6 inline-block">← All Flows</Link>
+      <Link href="/" className="text-sm text-teal-600 hover:text-teal-700 font-medium mb-6 inline-flex items-center gap-1">← All Flows</Link>
       <div className="flex items-center gap-3 mb-6">
         <span className="text-4xl">{origin.origin_flag}</span>
         <div>
-          <h1 className="text-3xl font-bold text-white">{origin.origin_label}</h1>
-          <p className="text-gray-400 text-sm mt-1">
+          <h1 className="text-3xl font-bold text-slate-900">{origin.origin_label}</h1>
+          <p className="text-slate-500 text-sm mt-1">
             Total outflow: {(total / 1000000).toFixed(2)}M displaced
           </p>
         </div>
       </div>
 
-      <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 mb-6">
-        <h2 className="font-semibold text-white mb-4">Where They Fled To</h2>
-        <DisplacementBarChart data={chartData} color="#ef4444" />
+      <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 mb-6">
+        <h2 className="font-bold text-slate-900 mb-4">Where They Fled To</h2>
+        <DisplacementBarChart data={chartData} color="#14b8a6" />
       </div>
 
       <div className="space-y-3">
@@ -78,16 +78,16 @@ export default async function OriginPage(props: PageProps<"/origin/[slug]">) {
           <Link
             key={f.id}
             href={`/destination/${f.destination}`}
-            className="block bg-gray-900 border border-gray-700 rounded-lg p-4 hover:border-blue-500 transition-colors"
+            className="block bg-white rounded-2xl border border-slate-100 shadow-sm p-5 hover:shadow-md hover:-translate-y-0.5 transition-all group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="text-xl">{f.destination_flag}</span>
-                <span className="font-medium text-white">{f.destination_label}</span>
+                <span className="font-medium text-slate-900 group-hover:text-teal-600 transition-colors">{f.destination_label}</span>
               </div>
               <div className="text-right">
-                <div className="font-bold text-white">{(f.count / 1000000).toFixed(2)}M</div>
-                <div className={`text-xs ${f.trend === "increasing" ? "text-red-400" : f.trend === "stable" ? "text-gray-400" : "text-green-400"}`}>
+                <div className="font-bold text-teal-600">{(f.count / 1000000).toFixed(2)}M</div>
+                <div className={`text-xs ${f.trend === "increasing" ? "text-red-500" : f.trend === "stable" ? "text-slate-400" : "text-green-500"}`}>
                   {f.trend === "increasing" ? "↑ Increasing" : f.trend === "stable" ? "→ Stable" : "↓ Decreasing"}
                 </div>
               </div>
