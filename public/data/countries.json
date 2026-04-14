@@ -1,0 +1,21 @@
+{
+  "origins": [
+    {"code":"ua","name":"Ukraine","flag":"🇺🇦","slug":"ukraine","total_outflow":2670000,"conflicts":["russia-ukraine"]},
+    {"code":"sd","name":"Sudan","flag":"🇸🇩","slug":"sudan","total_outflow":1630000,"conflicts":["sudan-civil-war"]},
+    {"code":"mm","name":"Myanmar","flag":"🇲🇲","slug":"myanmar","total_outflow":470000,"conflicts":["myanmar-civil-war"]},
+    {"code":"ht","name":"Haiti","flag":"🇭🇹","slug":"haiti","total_outflow":280000,"conflicts":["haiti-gang-crisis"]},
+    {"code":"ps","name":"Gaza","flag":"🇵🇸","slug":"gaza","total_outflow":150000,"conflicts":["israel-hamas"]},
+    {"code":"so","name":"Somalia","flag":"🇸🇴","slug":"somalia","total_outflow":420000,"conflicts":["al-shabaab"]}
+  ],
+  "destinations": [
+    {"code":"pl","name":"Poland","flag":"🇵🇱","slug":"poland","total_inflow":1200000,"conflicts":["russia-ukraine"]},
+    {"code":"de","name":"Germany","flag":"🇩🇪","slug":"germany","total_inflow":980000,"conflicts":["russia-ukraine"]},
+    {"code":"eg","name":"Egypt","flag":"🇪🇬","slug":"egypt","total_inflow":1000000,"conflicts":["sudan-civil-war","israel-hamas"]},
+    {"code":"cz","name":"Czech Republic","flag":"🇨🇿","slug":"czech-republic","total_inflow":490000,"conflicts":["russia-ukraine"]},
+    {"code":"td","name":"Chad","flag":"🇹🇩","slug":"chad","total_inflow":780000,"conflicts":["sudan-civil-war"]},
+    {"code":"th","name":"Thailand","flag":"🇹🇭","slug":"thailand","total_inflow":350000,"conflicts":["myanmar-civil-war"]},
+    {"code":"in","name":"India","flag":"🇮🇳","slug":"india","total_inflow":120000,"conflicts":["myanmar-civil-war"]},
+    {"code":"us","name":"United States","flag":"🇺🇸","slug":"united-states","total_inflow":280000,"conflicts":["haiti-gang-crisis"]},
+    {"code":"ke","name":"Kenya","flag":"🇰🇪","slug":"kenya","total_inflow":420000,"conflicts":["al-shabaab"]}
+  ]
+}

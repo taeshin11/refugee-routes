@@ -1,0 +1,15 @@
+{
+  "updated": "2026-04-14",
+  "flows": [
+    {"id":"ukr-pol","origin":"ukraine","origin_label":"Ukraine","origin_flag":"🇺🇦","destination":"poland","destination_label":"Poland","destination_flag":"🇵🇱","count":1200000,"type":"refugee","conflict":"russia-ukraine","date_peak":"2022-03-15","trend":"stable"},
+    {"id":"ukr-deu","origin":"ukraine","origin_label":"Ukraine","origin_flag":"🇺🇦","destination":"germany","destination_label":"Germany","destination_flag":"🇩🇪","count":980000,"type":"refugee","conflict":"russia-ukraine","date_peak":"2022-04-01","trend":"stable"},
+    {"id":"ukr-cze","origin":"ukraine","origin_label":"Ukraine","origin_flag":"🇺🇦","destination":"czech-republic","destination_label":"Czech Republic","destination_flag":"🇨🇿","count":490000,"type":"refugee","conflict":"russia-ukraine","date_peak":"2022-05-01","trend":"stable"},
+    {"id":"sdn-egy","origin":"sudan","origin_label":"Sudan","origin_flag":"🇸🇩","destination":"egypt","destination_label":"Egypt","destination_flag":"🇪🇬","count":850000,"type":"refugee","conflict":"sudan-civil-war","date_peak":"2023-07-01","trend":"increasing"},
+    {"id":"sdn-tcd","origin":"sudan","origin_label":"Sudan","origin_flag":"🇸🇩","destination":"chad","destination_label":"Chad","destination_flag":"🇹🇩","count":780000,"type":"refugee","conflict":"sudan-civil-war","date_peak":"2023-09-01","trend":"increasing"},
+    {"id":"mya-tha","origin":"myanmar","origin_label":"Myanmar","origin_flag":"🇲🇲","destination":"thailand","destination_label":"Thailand","destination_flag":"🇹🇭","count":350000,"type":"refugee","conflict":"myanmar-civil-war","date_peak":"2023-11-01","trend":"increasing"},
+    {"id":"mya-ind","origin":"myanmar","origin_label":"Myanmar","origin_flag":"🇲🇲","destination":"india","destination_label":"India","destination_flag":"🇮🇳","count":120000,"type":"refugee","conflict":"myanmar-civil-war","date_peak":"2024-01-01","trend":"stable"},
+    {"id":"hti-usa","origin":"haiti","origin_label":"Haiti","origin_flag":"🇭🇹","destination":"united-states","destination_label":"United States","destination_flag":"🇺🇸","count":280000,"type":"migrant","conflict":"haiti-gang-crisis","date_peak":"2024-06-01","trend":"stable"},
+    {"id":"pse-egy","origin":"gaza","origin_label":"Gaza","origin_flag":"🇵🇸","destination":"egypt","destination_label":"Egypt","destination_flag":"🇪🇬","count":150000,"type":"refugee","conflict":"israel-hamas","date_peak":"2024-02-01","trend":"increasing"},
+    {"id":"som-ken","origin":"somalia","origin_label":"Somalia","origin_flag":"🇸🇴","destination":"kenya","destination_label":"Kenya","destination_flag":"🇰🇪","count":420000,"type":"refugee","conflict":"al-shabaab","date_peak":"2022-01-01","trend":"stable"}
+  ]
+}
