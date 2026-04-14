@@ -9,9 +9,29 @@ import Link from "next/link";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Refugee Routes — Global Displacement Flow Tracker 2026",
-  description:
-    "Track where refugees and displaced people flee from and to. Data on Ukraine, Sudan, Myanmar, Gaza, Somalia and more.",
+  title: {
+    default: 'Refugee Routes | Real-Time Intelligence',
+    template: '%s | Refugee Routes'
+  },
+  description: 'Mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones',
+  keywords: 'refugee routes, displacement map, migration flows, forced displacement, refugee crisis, IDP',
+  openGraph: {
+    type: 'website',
+    siteName: 'Refugee Routes',
+    title: 'Refugee Routes | Real-Time Intelligence',
+    description: 'Mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Refugee Routes',
+    description: 'Mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones',
+  },
+  verification: {
+    google: 'add-your-google-site-verification-here',
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -39,13 +59,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </header>
         <main className="flex-1">{children}</main>
         <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 mt-auto">
-          <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="flex items-center gap-2">
-              <span className="text-white font-semibold">Refugee Routes</span>
-              <span className="text-slate-600">·</span>
-              <span className="text-xs">Data sourced from UNHCR, IOM, and open government datasets</span>
+          <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm border-t border-slate-700 pt-6 mb-4 mt-4">
+              <a href="/about" className="hover:text-white transition-colors">About Us</a>
+              <a href="/faq" className="hover:text-white transition-colors">How to Use &amp; FAQ</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
             </div>
-            <VisitorCounter />
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <span className="text-white font-semibold">Refugee Routes</span>
+                <span className="text-slate-600">·</span>
+                <span className="text-xs">Data sourced from UNHCR, IOM, and open government datasets</span>
+              </div>
+              <VisitorCounter />
+            </div>
           </div>
         </footer>
         <AdMobileSticky />

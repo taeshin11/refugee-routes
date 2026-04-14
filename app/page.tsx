@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
@@ -5,6 +6,12 @@ import AdInContent from "@/components/ads/AdInContent";
 import AdSidebar from "@/components/ads/AdSidebar";
 import FlowCard from "@/components/FlowCard";
 import DisplacementBarChart from "@/components/DisplacementBarChart";
+
+export const metadata: Metadata = {
+  title: 'Refugee Routes | Real-Time Conflict Intelligence',
+  description: 'Mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones',
+  keywords: 'refugee routes, displacement map, migration flows, forced displacement, refugee crisis, IDP',
+}
 
 type Flow = {
   id: string;

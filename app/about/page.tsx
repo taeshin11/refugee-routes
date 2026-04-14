@@ -1,43 +1,49 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "About — Refugee Routes",
-  description: "Methodology and data sources for Refugee Routes displacement tracker.",
-};
+  title: 'About Us',
+  description: 'Learn about Refugee Routes — our mission, methodology, and commitment to transparent conflict intelligence.',
+  keywords: 'refugee routes, displacement map, migration flows, forced displacement, refugee crisis, IDP, about us, conflict intelligence',
+}
 
 export default function AboutPage() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-slate-900 mb-6">About Refugee Routes</h1>
-      <div className="space-y-4">
-        <p className="text-slate-600 leading-relaxed">
-          Refugee Routes visualizes displacement flows — where people flee from and where they end up —
-          using data from UNHCR, IOM, and government statistical agencies.
-        </p>
-
-        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
-          <h2 className="text-lg font-bold text-slate-900 mb-3">Methodology</h2>
-          <p className="text-slate-600 text-sm leading-relaxed">
-            Counts represent registered refugees and asylum seekers as reported by host country authorities
-            and UNHCR registration data. IDP (Internally Displaced Person) figures are sourced from IDMC.
-            &ldquo;Migrants&rdquo; denotes mixed-migration flows where protection status is contested.
-          </p>
+    <main className="bg-slate-50 min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <nav className="text-sm text-slate-500 mb-8">
+          <Link href="/" className="hover:text-slate-700">Home</Link>
+          <span className="mx-2">/</span>
+          <span>About Us</span>
+        </nav>
+        <h1 className="text-4xl font-bold text-slate-900 mb-4">About Refugee Routes</h1>
+        <p className="text-xl text-slate-600 mb-10 leading-relaxed">Mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones</p>
+        <div className="space-y-8">
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Our Mission</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Refugee Routes was built on the conviction that access to timely, accurate conflict intelligence should not be limited to governments, think tanks, or expensive subscription services. We believe that journalists, researchers, policy analysts, students, and engaged citizens deserve access to quality information to understand the world's most pressing security challenges.</p>
+            <p className="text-slate-600 leading-relaxed">In a world where armed conflicts shape economies, displace populations, and determine the course of history, we are committed to making conflict data accessible, transparent, and useful.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">What We Track</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Refugee Routes provides mapping refugee displacement routes, migration flows, and humanitarian corridors from active conflict zones. Our platform aggregates, verifies, and presents this data in a format designed for clarity, so users can quickly understand the current situation and track changes over time.</p>
+            <p className="text-slate-600 leading-relaxed">We cover active conflicts across multiple regions, providing visualizations, timelines, and analysis that contextualizes data within broader geopolitical realities.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Our Data Sources &amp; Methodology</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Our data is compiled from publicly available sources: official government reports, United Nations agencies (OCHA, UNHCR, WFP), academic conflict databases (ACLED, SIPRI, Uppsala Conflict Data Program), verified open-source intelligence, and internationally recognized news organizations.</p>
+            <p className="text-slate-600 leading-relaxed">We prioritize source transparency and cross-reference multiple sources. Where sources disagree, we present the range of estimates rather than a single contested figure.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Why This Matters</h2>
+            <p className="text-slate-600 leading-relaxed">Conflict data is inherently sensitive and contested. We strive to present information in a factual, non-partisan manner — to ensure accurate information supports informed discussion, humanitarian response, and evidence-based policy. The data we track represents real human lives, and that responsibility guides everything we do.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-xl font-semibold text-slate-800 mb-3">Contact Us</h2>
+            <p className="text-slate-600">For inquiries, corrections, or partnership opportunities, reach out at <strong>contact@refugee-routes.vercel.app</strong>.</p>
+          </section>
         </div>
-
-        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
-          <h2 className="text-lg font-bold text-slate-900 mb-3">Data Sources</h2>
-          <ul className="space-y-2 text-sm text-slate-600">
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>UNHCR Global Trends Report 2026</li>
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>IOM Displacement Tracking Matrix (DTM)</li>
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>IDMC Global Report on Internal Displacement</li>
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Individual country statistical agencies</li>
-          </ul>
-        </div>
-
-        <p className="text-slate-400 text-sm">
-          Last updated: April 2026. Data may lag real-time conditions by 30-90 days.
-        </p>
       </div>
-    </div>
-  );
+    </main>
+  )
 }
