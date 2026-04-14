@@ -5,7 +5,6 @@ import AdHeader from "@/components/ads/AdHeader";
 import AdMobileSticky from "@/components/ads/AdMobileSticky";
 import VisitorCounter from "@/components/VisitorCounter";
 import Link from "next/link";
-import { FeedbackButton } from "@/components/FeedbackButton";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+    <html suppressHydrationWarning className={`${geistSans.variable} h-full antialiased`}>
       <head>
         <script
           type="application/ld+json"
@@ -93,7 +92,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
         </footer>
         <AdMobileSticky />
-        <FeedbackButton siteName="Refugee Routes" siteUrl="https://refugee-routes.vercel.app" />
       </body>
     </html>
   );
