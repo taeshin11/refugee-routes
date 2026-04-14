@@ -39,6 +39,16 @@ export default function AboutPage() {
             <p className="text-slate-600 leading-relaxed">Conflict data is inherently sensitive and contested. We strive to present information in a factual, non-partisan manner — to ensure accurate information supports informed discussion, humanitarian response, and evidence-based policy. The data we track represents real human lives, and that responsibility guides everything we do.</p>
           </section>
           <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Our Team &amp; Independence</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">The platform was developed by a team of data engineers, journalists, and security researchers passionate about making conflict intelligence accessible to the public. Our backgrounds span open-source intelligence (OSINT), data visualization, and international security studies.</p>
+            <p className="text-slate-600 leading-relaxed">We are not affiliated with any government, military organization, or political group. Funded entirely through advertising revenue, allowing us to remain independent and freely accessible to all users worldwide.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
+            <h2 className="text-2xl font-semibold text-slate-800 mb-4">Structured Data vs. News Cycles</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">Traditional news media covers conflicts reactively. Refugee Routes provides continuous, structured monitoring that persists beyond news cycles. Where newspapers provide narrative, we provide data.</p>
+            <p className="text-slate-600 leading-relaxed">Our structured data format makes it easy for researchers to track trends, compare across regions, and identify patterns invisible in unstructured reporting.</p>
+          </section>
+          <section className="bg-white rounded-2xl border border-slate-100 p-6">
             <h2 className="text-xl font-semibold text-slate-800 mb-3">Contact Us</h2>
             <p className="text-slate-600">For inquiries, corrections, or partnership opportunities, reach out at <strong>contact@refugee-routes.vercel.app</strong>.</p>
           </section>
